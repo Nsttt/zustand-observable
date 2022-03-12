@@ -1,0 +1,52 @@
+{
+  "name": "zustand-observable",
+  "version": "1.0.0",
+  "author": "Nestor <nestor@nstlopez.com>",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "typings": "./dist/types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nsttt/zustand-observable.git"
+  },
+  "keywords": [
+    "Rx",
+    "zustand",
+    "middleware",
+    "observable",
+    "thunk",
+    "async",
+    "cancel",
+    "action"
+  ],
+  "bugs": {
+    "url": "https://github.com/nsttt/zustand-observable.git/issues"
+  },
+  "homepage": "https://github.com/nsttt/zustand-observable.git#README.md",
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "build": "pnpm run build:esm && pnpm run build:cjs && pnpm run build:types",
+    "build:cjs": "tsc -p configs/tsconfig.cjs.json",
+    "build:esm": "tsc -p configs/tsconfig.esm.json",
+    "build:types": "tsc -p configs/tsconfig.types.json"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.5.1",
+    "rxjs": "^7.5.5",
+    "typescript": "^4.6.2",
+    "vite": "^2.8.6",
+    "zustand": "^3.7.1"
+  }
+}
